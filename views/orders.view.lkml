@@ -6,6 +6,7 @@ view: orders {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    drill_fields: [created_date]
   }
   dimension_group: created {
     type: time
