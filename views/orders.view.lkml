@@ -20,10 +20,12 @@ view: orders {
     type: number
     # hidden: yes
     sql: ${TABLE}.user_id ;;
+    description: "User ID"
   }
   measure: count {
     type: count
     drill_fields: [status]
+    description: "Order Count"
   }
 
   # ----- Sets of fields for drilling ------
