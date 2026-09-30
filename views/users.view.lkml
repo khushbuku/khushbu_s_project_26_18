@@ -28,6 +28,7 @@ view: users {
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
+    drill_fields: [state, city, country]
   }
   dimension: first_name {
     type: string
@@ -57,16 +58,16 @@ view: users {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	first_name,
-	last_name,
-	demo_visits_data.count,
-	events.count,
-	orders.count,
-	saralooker.count,
-	sindhu.count,
-	user_data.count
-	]
+  id,
+  first_name,
+  last_name,
+  demo_visits_data.count,
+  events.count,
+  orders.count,
+  saralooker.count,
+  sindhu.count,
+  user_data.count
+  ]
   }
 
 }
